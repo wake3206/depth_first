@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useReducer } from 'react'
 import App from 'next/app'
+import { MainProvider } from "../state/contexts";
 import '../antd_custom/styles.less'
 
 class MyApp extends App {
@@ -9,7 +10,11 @@ class MyApp extends App {
 
   render() {
     const { Component } = this.props
-    return <Component  />
+    return (
+      <MainProvider>
+        <Component />
+      </MainProvider>
+    )
   }
 }
 
