@@ -21,7 +21,7 @@ export const loadDataList = filter => {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
-        body:`params=${JSON.stringify({...filter,...formSearch})}`
+        body:`params=${JSON.stringify({...formSearch, ...filter})}`
       });
 
       let res = await raw.json();
@@ -114,5 +114,38 @@ export const loadFormSearch = val => {
   return async dispatch => {
     //--
     dispatch(setFormSearch(val))
+  };
+};
+
+export const onUpdateStatus = val => {
+  return async dispatch => {
+    //--
+    try {
+      dispatch(setSaving(true));
+
+      console.log('setFormData-->', val);
+      
+      dispatch(setForm(val));
+
+      const raw = await fetch(`http://localhost:3001/save_order`, {
+        method: 'POST',
+        headers: { 
+          'Content-Type':'application/x-www-form-urlencoded'
+        },
+        body:`params=${JSON.stringify(val)}`
+      })
+  
+      let res = await raw.json()
+    
+      if (res.status) {
+        //dispatch(setDataList(res.orders));
+      } else {
+        console.log("error", res.message);
+      }
+
+      dispatch(setSaving(false))
+    } catch (error) {
+      console.log("error", error.message);
+    }
   };
 };

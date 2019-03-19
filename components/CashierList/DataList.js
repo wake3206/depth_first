@@ -20,7 +20,9 @@ const DataList = ({
   const loadData = async () => {
 
     //setLoading(true);
-    await loadDataList({status:1});
+    console.log('loadData');
+    
+    await loadDataList({status:2});
     //setLoading(false);
 
   }
@@ -45,6 +47,11 @@ const DataList = ({
       key: "amount"
     },
     {
+      title: `description`,
+      dataIndex: "description",
+      key: "description"
+    },
+    {
       title: "status",
       key: "status",
       dataIndex: "status",
@@ -62,25 +69,19 @@ const DataList = ({
       key: "Action",
       render: (id, record) => (
         <span>
-          <a href="javascript:;" onClick={()=>handleOpenDetail(record)}>Detail {record.name}</a>
-          <Divider type="vertical" />
-          <a href="javascript:;" onClick={()=>showConfirm(record)}>Delete</a>
+          <a href="javascript:;" onClick={()=>handlePayment(record)}>จ่ายเงิน </a>
         </span>
       )
     }
   ];
 
-  const showConfirm = (model) => {
+  const handlePayment = (model) => {
     Modal.confirm({
-      title: 'Do you Want to delete this items?',
+      title: 'ยืนยันการจ่ายเงิน',
       async onOk() {
-        //await delOrderCash({id});
-
-        model.status = 4;
-        await onUpdateStatus(model)
-
-        console.log('loadDataList');
-        
+  
+        model.status = 5;
+        await onUpdateStatus(model);
         loadData();
       },
       onCancel() {
@@ -89,29 +90,10 @@ const DataList = ({
     });
   }
 
-  const data = [
-    {
-      key: "1",
-      name: "John Brown",
-      age: 32,
-      address: "New York No. 1 Lake Park",
-      tags: ["nice", "developer"]
-    },
-    {
-      key: "2",
-      name: "Jim Green",
-      age: 42,
-      address: "London No. 1 Lake Park",
-      tags: ["loser"]
-    },
-    {
-      key: "3",
-      name: "Joe Black",
-      age: 32,
-      address: "Sidney No. 1 Lake Park",
-      tags: ["cool", "teacher"]
-    }
-  ];
+ 
+
+  
+
 
   return (
     <div>

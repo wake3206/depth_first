@@ -1,10 +1,16 @@
 import React, {useEffect, useState} from "react";
 import {connect} from "react-redux";
 import {Table, Divider, Tag, Button, Modal} from "antd";
-import {loadDataList,delOrderCash} from "../../state/actions/CashAction";
+import {loadDataList,delOrderCash, onUpdateStatus} from "../../state/actions/CashAction";
 import {dateFormatToThai, mapStatus} from "../../services/Util";
 
-const DataList = ({loadDataList, cash, delOrderCash, handleOpenDetail}) => {
+const DataList = ({
+  loadDataList, 
+  cash, 
+  delOrderCash, 
+  handleOpenDetail,
+  onUpdateStatus
+}) => {
   const [loding, setLoading] = useState(true);
 
   useEffect(() => {
@@ -39,6 +45,11 @@ const DataList = ({loadDataList, cash, delOrderCash, handleOpenDetail}) => {
       key: "amount"
     },
     {
+      title: `description`,
+      dataIndex: "description",
+      key: "description"
+    },
+    {
       title: "status",
       key: "status",
       dataIndex: "status",
@@ -56,22 +67,21 @@ const DataList = ({loadDataList, cash, delOrderCash, handleOpenDetail}) => {
       key: "Action",
       render: (id, record) => (
         <span>
-          <a href="javascript:;" onClick={()=>handleOpenDetail(record)}>Detail {record.name}</a>
+          <a href="javascript:;" onClick={()=>handleApprove(record)}>อนุมัติ </a>
           <Divider type="vertical" />
-          <a href="javascript:;" onClick={()=>showConfirm(id)}>Delete</a>
+          <a href="javascript:;" onClick={()=>handleInApprove(record)}>ไม่อนุมัติ</a>
         </span>
       )
     }
   ];
 
-  const showConfirm = (id) => {
+  const handleApprove = (model) => {
     Modal.confirm({
-      title: 'Do you Want to delete this items?',
+      title: 'ยืนยันการอนุมัติรายการ',
       async onOk() {
-        await delOrderCash({id});
-
-        console.log('loadDataList');
-        
+  
+        model.status = 2;
+        await onUpdateStatus(model);
         loadData();
       },
       onCancel() {
@@ -80,29 +90,23 @@ const DataList = ({loadDataList, cash, delOrderCash, handleOpenDetail}) => {
     });
   }
 
-  const data = [
-    {
-      key: "1",
-      name: "John Brown",
-      age: 32,
-      address: "New York No. 1 Lake Park",
-      tags: ["nice", "developer"]
-    },
-    {
-      key: "2",
-      name: "Jim Green",
-      age: 42,
-      address: "London No. 1 Lake Park",
-      tags: ["loser"]
-    },
-    {
-      key: "3",
-      name: "Joe Black",
-      age: 32,
-      address: "Sidney No. 1 Lake Park",
-      tags: ["cool", "teacher"]
-    }
-  ];
+  const handleInApprove = (model) => {
+    Modal.confirm({
+      title: 'ยืนยันไม่อนุมัติรายการ',
+      async onOk() {
+        
+        model.status = 3;
+        await onUpdateStatus(model);
+        loadData();
+      },
+      onCancel() {
+        console.log('Cancel');
+      },
+    });
+  }
+
+  
+
 
   return (
     <div>
@@ -125,5 +129,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {loadDataList, delOrderCash}
+  {loadDataList, delOrderCash, onUpdateStatus}
 )(DataList);

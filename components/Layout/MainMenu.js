@@ -8,7 +8,7 @@ const MainMenu = () => {
   const menus = [
     {name: "ตั้งเบิก", icon: "solution", url: "/order_list"},
     {name: "อนุมัติ", icon: "check-circle", url: "/approve"},
-    {name: "จ่ายเงิน", icon: "inbox", url: "/"}
+    {name: "จ่ายเงิน", icon: "inbox", url: "/cashier"}
   ];
 
   const goto = (url) => {  

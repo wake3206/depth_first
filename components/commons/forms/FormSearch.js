@@ -3,7 +3,7 @@ import {Form, Row, Col, Input, Button, Icon, Select} from "antd";
 import {connect} from "react-redux";
 import {loadDataList, loadFormSearch} from "../../../state/actions/CashAction";
 
-const FormSearch = ({form, loadDataList, loadFormSearch, optStatus}) => {
+const FormSearch = ({form, loadDataList, loadFormSearch, optStatus , iniStatus}) => {
 
   const handleReset = () => {
     form.resetFields();
@@ -47,7 +47,7 @@ const FormSearch = ({form, loadDataList, loadFormSearch, optStatus}) => {
                     message: "Input something!"
                   }
                 ],
-                initialValue:"1"
+                initialValue:(iniStatus !== undefined) ? iniStatus:"1"
               })(
                 <Select 
                   placeholder="Select a status">
