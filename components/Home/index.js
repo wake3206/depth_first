@@ -1,32 +1,17 @@
-import React, { useContext } from 'react';
-import {
-    State,
-    Dispatch,
-    useDispatch
-} from "../../state/contexts";
-import { onLeftPlus } from "../../state/actions";
+import React from "react";
+import {Layout} from "antd";
+const {Content} = Layout;
+import MainBreadcrumb from "../Layout/MainBreadcrumb";
 
 const Home = () => {
-
-    const state = useContext(State);
-    const actionclick = useDispatch(onLeftPlus('555'))
-
-
-    const handleLeftPlus = async () => {
-
-        console.log('bf click');
-        await actionclick();
-        console.log('af click');
-    }
-
-
-    return (
-        <div>
-            Hello Home!!!! {state.left}
-            <br />
-            <button onClick={() => handleLeftPlus()}>click + </button>
-        </div>
-    );
+  return (
+    <div>
+      <MainBreadcrumb />
+      <Content className="main-content">
+        <div id="head-home-page">TEST FOR DEVELOPER.</div>
+      </Content>
+    </div>
+  );
 };
 
 export default Home;

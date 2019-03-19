@@ -1,6 +1,8 @@
-import React, { useReducer } from 'react'
+import React from 'react'
 import App from 'next/app'
-import { MainProvider } from "../state/contexts";
+import { Provider } from 'react-redux'
+import withRedux from 'next-redux-wrapper'
+import { initStore } from '../state/store'
 import '../antd_custom/styles.less'
 
 class MyApp extends App {
@@ -9,13 +11,13 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component } = this.props
+    const { Component, store } = this.props
     return (
-      <MainProvider>
+      <Provider store={store}>
         <Component />
-      </MainProvider>
+      </Provider>
     )
   }
 }
 
-export default MyApp
+export default withRedux(initStore)(MyApp);

@@ -1,11 +1,14 @@
-import combineReducers from "./combineReducers";
-import leftReducer from "./leftReducer";
-import rightReducer from "./rightReducer";
+import { combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
+import StyleReducer from "./StyleReducer";
+import RouteReducer from "./RouteReducer";
+import CashReducer from "./CashReducer";
 
-/** using combineReducers */
-const rootReducer = combineReducers({
-  left: leftReducer,
-  right: rightReducer
-});
+const reducer = combineReducers({
+  form: formReducer,
+  styleState:StyleReducer,
+  routeInf:RouteReducer,
+  cash:CashReducer
+})
 
-export default rootReducer;
+export default reducer

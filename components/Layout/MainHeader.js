@@ -1,21 +1,19 @@
 import React from 'react';
+import { connect } from "react-redux";
 import {
     Icon, Button, Row, Col, Avatar,Layout
 } from 'antd';
 const { Header } = Layout;
 
-const MainHeader = ({collapsed, toggleCollapsed}) => {
- 
+
+const MainHeader = ({collapsed, toggleCollapsed, ...othProps}) => {
+
+    const { styleState } = othProps
+    
     return (
         <Header className="header" style={{ background: "#fff" }}>
-            <Button
-                className="btn-collape-sidebar"
-                type="primary"
-                onClick={toggleCollapsed} >
-
-                <Icon type={collapsed ? 'menu-unfold' : 'menu-fold'} />
-            </Button>
-            <div className="logo" >Heng IC Process</div>
+            
+            <div className="logo" >Test for developer</div>
 
             <Row
                 style={{ height: '100%', float: 'right' }}
@@ -31,4 +29,6 @@ const MainHeader = ({collapsed, toggleCollapsed}) => {
     );
 };
 
-export default MainHeader;
+const mapStateToProps = ({ styleState }) => ({styleState})
+
+export default connect(mapStateToProps)(MainHeader);
