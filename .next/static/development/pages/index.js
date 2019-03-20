@@ -41556,7 +41556,7 @@ var setLogout = Object(redux_act__WEBPACK_IMPORTED_MODULE_2__["createAction"])('
 
 /***/ }),
 
-/***/ 28:
+/***/ 2:
 /*!**************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fbunyut%2Fsite%2Fdepth_first%2Fpages%2Findex.js ***!
   \**************************************************************************************************************************/
@@ -41579,5 +41579,5 @@ module.exports = dll_55dc4e2ecf7824085104;
 
 /***/ })
 
-},[[28,"static/runtime/webpack.js","styles"]]]));;
+},[[2,"static/runtime/webpack.js","styles"]]]));;
 //# sourceMappingURL=index.js.map

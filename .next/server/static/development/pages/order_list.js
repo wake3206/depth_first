@@ -88,379 +88,10 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./components/CashierList/DataList.js":
-/*!********************************************!*\
-  !*** ./components/CashierList/DataList.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var antd_lib_table_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/table/style */ "antd/lib/table/style");
-/* harmony import */ var antd_lib_table_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_table_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/table */ "antd/lib/table");
-/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_table__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/modal/style */ "antd/lib/modal/style");
-/* harmony import */ var antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var antd_lib_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/modal */ "antd/lib/modal");
-/* harmony import */ var antd_lib_modal__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_modal__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../state/actions/CashAction */ "./state/actions/CashAction.js");
-/* harmony import */ var _services_Util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../services/Util */ "./services/Util.js");
-
-
-
-
-
-
-
-var _jsxFileName = "/Users/bunyut/site/depth_first/components/CashierList/DataList.js";
-
-
-
-
-
-var DataList = function DataList(_ref) {
-  var loadDataList = _ref.loadDataList,
-      cash = _ref.cash,
-      delOrderCash = _ref.delOrderCash,
-      handleOpenDetail = _ref.handleOpenDetail,
-      onUpdateStatus = _ref.onUpdateStatus;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(true),
-      _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState, 2),
-      loding = _useState2[0],
-      setLoading = _useState2[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(function () {
-    loadData();
-  }, []);
-
-  var loadData =
-  /*#__PURE__*/
-  function () {
-    var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])(
-    /*#__PURE__*/
-    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee() {
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              //setLoading(true);
-              console.log('loadData');
-              _context.next = 3;
-              return loadDataList({
-                status: 2
-              });
-
-            case 3:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee);
-    }));
-
-    return function loadData() {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-
-  var columns = [{
-    title: "id",
-    dataIndex: "id",
-    key: "id",
-    render: function render(txt, recd, index) {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
-      }, index + 1);
-    }
-  }, {
-    title: "code",
-    dataIndex: "code",
-    key: "code"
-  }, {
-    title: "amount",
-    dataIndex: "amount",
-    key: "amount"
-  }, {
-    title: "description",
-    dataIndex: "description",
-    key: "description"
-  }, {
-    title: "status",
-    key: "status",
-    dataIndex: "status",
-    render: function render(val) {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58
-        },
-        __self: this
-      }, Object(_services_Util__WEBPACK_IMPORTED_MODULE_10__["mapStatus"])(val));
-    }
-  }, {
-    title: "crate date",
-    dataIndex: "create_datetime",
-    key: "create_datetime",
-    render: function render(val) {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 64
-        },
-        __self: this
-      }, Object(_services_Util__WEBPACK_IMPORTED_MODULE_10__["dateFormatToThai"])(val));
-    }
-  }, {
-    title: "Action",
-    dataIndex: "id",
-    key: "Action",
-    render: function render(id, record) {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 71
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-        href: "javascript:;",
-        onClick: function onClick() {
-          return handlePayment(record);
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        },
-        __self: this
-      }, "\u0E08\u0E48\u0E32\u0E22\u0E40\u0E07\u0E34\u0E19 "));
-    }
-  }];
-
-  var handlePayment = function handlePayment(model) {
-    antd_lib_modal__WEBPACK_IMPORTED_MODULE_3___default.a.confirm({
-      title: 'ยืนยันการจ่ายเงิน',
-      onOk: function () {
-        var _onOk = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_5__["default"])(
-        /*#__PURE__*/
-        _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.mark(function _callee2() {
-          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_4___default.a.wrap(function _callee2$(_context2) {
-            while (1) {
-              switch (_context2.prev = _context2.next) {
-                case 0:
-                  model.status = 5;
-                  _context2.next = 3;
-                  return onUpdateStatus(model);
-
-                case 3:
-                  loadData();
-
-                case 4:
-                case "end":
-                  return _context2.stop();
-              }
-            }
-          }, _callee2);
-        }));
-
-        function onOk() {
-          return _onOk.apply(this, arguments);
-        }
-
-        return onOk;
-      }(),
-      onCancel: function onCancel() {
-        console.log('Cancel');
-      }
-    });
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 99
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    rowKey: "id",
-    loading: cash.loading,
-    style: {
-      marginTop: "10px"
-    },
-    columns: columns,
-    dataSource: cash.data,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 100
-    },
-    __self: this
-  }));
-};
-
-var mapStateToProps = function mapStateToProps(state) {
-  return {
-    cash: state.cash
-  };
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])(mapStateToProps, {
-  loadDataList: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_9__["loadDataList"],
-  delOrderCash: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_9__["delOrderCash"],
-  onUpdateStatus: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_9__["onUpdateStatus"]
-})(DataList));
-
-/***/ }),
-
-/***/ "./components/CashierList/index.js":
-/*!*****************************************!*\
-  !*** ./components/CashierList/index.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var antd_lib_card_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/card/style */ "antd/lib/card/style");
-/* harmony import */ var antd_lib_card_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_card_style__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var antd_lib_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/card */ "antd/lib/card");
-/* harmony import */ var antd_lib_card__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_card__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _Layout_MainBreadcrumb__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Layout/MainBreadcrumb */ "./components/Layout/MainBreadcrumb.js");
-/* harmony import */ var _commons_forms_FormSearch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../commons/forms/FormSearch */ "./components/commons/forms/FormSearch.js");
-/* harmony import */ var _DataList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DataList */ "./components/CashierList/DataList.js");
-/* harmony import */ var _commons_MainModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../commons/MainModal */ "./components/commons/MainModal/index.js");
-/* harmony import */ var _commons_forms_CashDetail__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../commons/forms/CashDetail */ "./components/commons/forms/CashDetail.js");
-/* harmony import */ var _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../state/actions/CashAction */ "./state/actions/CashAction.js");
-
-
-
-var _jsxFileName = "/Users/bunyut/site/depth_first/components/CashierList/index.js";
-
-
-
-
-
-
-
-
-
-var CashierList = function CashierList(_ref) {
-  var loadDataList = _ref.loadDataList;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
-      _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
-      open = _useState2[0],
-      setOpen = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
-      _useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
-      openDetail = _useState4[0],
-      setOpenDetail = _useState4[1];
-
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({}),
-      _useState6 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState5, 2),
-      selModel = _useState6[0],
-      setSelModel = _useState6[1];
-
-  var handleCancel = function handleCancel() {
-    setOpen(!open);
-    loadDataList();
-  };
-
-  var handleCloseDetail = function handleCloseDetail() {
-    setOpenDetail(!open);
-  };
-
-  var handleOpenDetail = function handleOpenDetail(model) {
-    setOpenDetail(true);
-    setSelModel(model);
-  };
-
-  var optStatus = [{
-    txt: "อนุมัติแล้ว",
-    value: "2"
-  }, {
-    txt: "สําเร็จแล้ว",
-    value: "5"
-  }];
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_Layout_MainBreadcrumb__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(antd_lib_card__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    title: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23\u0E23\u0E2D\u0E08\u0E48\u0E32\u0E22\u0E40\u0E07\u0E34\u0E19",
-    bordered: false,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_commons_forms_FormSearch__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    optStatus: optStatus,
-    iniStatus: "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_DataList__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    handleOpenDetail: handleOpenDetail,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_commons_MainModal__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    title: "Detail.",
-    open: openDetail,
-    handleCancel: function handleCancel() {
-      return setOpenDetail(false);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_commons_forms_CashDetail__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    model: selModel,
-    handleCancel: handleCloseDetail,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: this
-  }))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(null, {
-  loadDataList: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_10__["loadDataList"]
-})(CashierList));
-
-/***/ }),
 
 /***/ "./components/Layout/MainBreadcrumb.js":
 /*!*********************************************!*\
@@ -1018,6 +649,498 @@ var MainLayout = function MainLayout(_ref) {
 
 /***/ }),
 
+/***/ "./components/OrderList/BtnAddNew.js":
+/*!*******************************************!*\
+  !*** ./components/OrderList/BtnAddNew.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_button_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/button/style */ "antd/lib/button/style");
+/* harmony import */ var antd_lib_button_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/button */ "antd/lib/button");
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+
+
+var _jsxFileName = "/Users/bunyut/site/depth_first/components/OrderList/BtnAddNew.js";
+
+
+var BtnAddNew = function BtnAddNew(_ref) {
+  var setOpen = _ref.setOpen;
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    onClick: function onClick() {
+      return setOpen(true);
+    },
+    type: "primary",
+    icon: "plus",
+    size: "default",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, "\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23");
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BtnAddNew);
+
+/***/ }),
+
+/***/ "./components/OrderList/DataList.js":
+/*!******************************************!*\
+  !*** ./components/OrderList/DataList.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_table_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/table/style */ "antd/lib/table/style");
+/* harmony import */ var antd_lib_table_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_table_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/table */ "antd/lib/table");
+/* harmony import */ var antd_lib_table__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_table__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/modal/style */ "antd/lib/modal/style");
+/* harmony import */ var antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd_lib_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/modal */ "antd/lib/modal");
+/* harmony import */ var antd_lib_modal__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_modal__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_divider_style__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/divider/style */ "antd/lib/divider/style");
+/* harmony import */ var antd_lib_divider_style__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_divider_style__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var antd_lib_divider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/divider */ "antd/lib/divider");
+/* harmony import */ var antd_lib_divider__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_divider__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../state/actions/CashAction */ "./state/actions/CashAction.js");
+/* harmony import */ var _services_Util__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../services/Util */ "./services/Util.js");
+
+
+
+
+
+
+
+
+
+var _jsxFileName = "/Users/bunyut/site/depth_first/components/OrderList/DataList.js";
+
+
+
+
+
+var DataList = function DataList(_ref) {
+  var loadDataList = _ref.loadDataList,
+      cash = _ref.cash,
+      delOrderCash = _ref.delOrderCash,
+      handleOpenDetail = _ref.handleOpenDetail,
+      onUpdateStatus = _ref.onUpdateStatus;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_9__["useState"])(true),
+      _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_8__["default"])(_useState, 2),
+      loding = _useState2[0],
+      setLoading = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_9__["useEffect"])(function () {
+    loadData();
+  }, []);
+
+  var loadData =
+  /*#__PURE__*/
+  function () {
+    var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return loadDataList({
+                status: 1
+              });
+
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function loadData() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
+
+  var columns = [{
+    title: "id",
+    dataIndex: "id",
+    key: "id",
+    render: function render(txt, recd, index) {
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        },
+        __self: this
+      }, index + 1);
+    }
+  }, {
+    title: "code",
+    dataIndex: "code",
+    key: "code"
+  }, {
+    title: "amount",
+    dataIndex: "amount",
+    key: "amount"
+  }, {
+    title: "status",
+    key: "status",
+    dataIndex: "status",
+    render: function render(val) {
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, Object(_services_Util__WEBPACK_IMPORTED_MODULE_12__["mapStatus"])(val));
+    }
+  }, {
+    title: "crate date",
+    dataIndex: "create_datetime",
+    key: "create_datetime",
+    render: function render(val) {
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, Object(_services_Util__WEBPACK_IMPORTED_MODULE_12__["dateFormatToThai"])(val));
+    }
+  }, {
+    title: "Action",
+    dataIndex: "id",
+    key: "Action",
+    render: function render(id, record) {
+      return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "javascript:;",
+        onClick: function onClick() {
+          return handleOpenDetail(record);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }, "Detail ", record.name), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(antd_lib_divider__WEBPACK_IMPORTED_MODULE_5___default.a, {
+        type: "vertical",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+        href: "javascript:;",
+        onClick: function onClick() {
+          return showConfirm(record);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, "Delete"));
+    }
+  }];
+
+  var showConfirm = function showConfirm(model) {
+    antd_lib_modal__WEBPACK_IMPORTED_MODULE_3___default.a.confirm({
+      title: 'Do you Want to delete this items?',
+      onOk: function () {
+        var _onOk = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__["default"])(
+        /*#__PURE__*/
+        _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee2() {
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  //await delOrderCash({id});
+                  model.status = 4;
+                  _context2.next = 3;
+                  return onUpdateStatus(model);
+
+                case 3:
+                  console.log('loadDataList');
+                  loadData();
+
+                case 5:
+                case "end":
+                  return _context2.stop();
+              }
+            }
+          }, _callee2);
+        }));
+
+        function onOk() {
+          return _onOk.apply(this, arguments);
+        }
+
+        return onOk;
+      }(),
+      onCancel: function onCancel() {
+        console.log('Cancel');
+      }
+    });
+  };
+
+  var data = [{
+    key: "1",
+    name: "John Brown",
+    age: 32,
+    address: "New York No. 1 Lake Park",
+    tags: ["nice", "developer"]
+  }, {
+    key: "2",
+    name: "Jim Green",
+    age: 42,
+    address: "London No. 1 Lake Park",
+    tags: ["loser"]
+  }, {
+    key: "3",
+    name: "Joe Black",
+    age: 32,
+    address: "Sidney No. 1 Lake Park",
+    tags: ["cool", "teacher"]
+  }];
+  return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(antd_lib_table__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    rowKey: "id",
+    loading: cash.loading,
+    style: {
+      marginTop: "10px"
+    },
+    columns: columns,
+    dataSource: cash.data,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118
+    },
+    __self: this
+  }));
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    cash: state.cash
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_10__["connect"])(mapStateToProps, {
+  loadDataList: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_11__["loadDataList"],
+  delOrderCash: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_11__["delOrderCash"],
+  onUpdateStatus: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_11__["onUpdateStatus"]
+})(DataList));
+
+/***/ }),
+
+/***/ "./components/OrderList/index.js":
+/*!***************************************!*\
+  !*** ./components/OrderList/index.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_card_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/card/style */ "antd/lib/card/style");
+/* harmony import */ var antd_lib_card_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_card_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/card */ "antd/lib/card");
+/* harmony import */ var antd_lib_card__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_card__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
+/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/layout/style */ "antd/lib/layout/style");
+/* harmony import */ var antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/layout */ "antd/lib/layout");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Layout_MainBreadcrumb__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../Layout/MainBreadcrumb */ "./components/Layout/MainBreadcrumb.js");
+/* harmony import */ var _commons_forms_FormSearch__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../commons/forms/FormSearch */ "./components/commons/forms/FormSearch.js");
+/* harmony import */ var _DataList__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./DataList */ "./components/OrderList/DataList.js");
+/* harmony import */ var _commons_MainModal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../commons/MainModal */ "./components/commons/MainModal/index.js");
+/* harmony import */ var _commons_forms_AddOrderForm__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../commons/forms/AddOrderForm */ "./components/commons/forms/AddOrderForm.js");
+/* harmony import */ var _commons_forms_CashDetail__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../commons/forms/CashDetail */ "./components/commons/forms/CashDetail.js");
+/* harmony import */ var _BtnAddNew__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./BtnAddNew */ "./components/OrderList/BtnAddNew.js");
+/* harmony import */ var _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../state/actions/CashAction */ "./state/actions/CashAction.js");
+
+
+
+
+
+var _jsxFileName = "/Users/bunyut/site/depth_first/components/OrderList/index.js";
+
+
+var Content = antd_lib_layout__WEBPACK_IMPORTED_MODULE_4___default.a.Content;
+
+
+
+
+
+
+
+
+
+var Home = function Home(_ref) {
+  var loadDataList = _ref.loadDataList;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false),
+      _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
+      open = _useState2[0],
+      setOpen = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false),
+      _useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
+      openDetail = _useState4[0],
+      setOpenDetail = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])({}),
+      _useState6 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState5, 2),
+      selModel = _useState6[0],
+      setSelModel = _useState6[1];
+
+  var handleCancel = function handleCancel() {
+    setOpen(!open);
+    loadDataList({
+      status: 1
+    });
+  };
+
+  var handleCloseDetail = function handleCloseDetail() {
+    setOpenDetail(!open);
+  };
+
+  var handleOpenDetail = function handleOpenDetail(model) {
+    setOpenDetail(true);
+    setSelModel(model);
+  };
+
+  var optStatus = [{
+    txt: "ขออนุมัติ",
+    value: "1"
+  }, {
+    txt: "อนุมัติแล้ว",
+    value: "2"
+  }, {
+    txt: "ไม่อนุมัติ",
+    value: "3"
+  }, {
+    txt: "ยกเลิก",
+    value: "4"
+  }, {
+    txt: "สําเร็จแล้ว",
+    value: "5"
+  }];
+  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Layout_MainBreadcrumb__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(antd_lib_card__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    title: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23\u0E15\u0E31\u0E49\u0E07\u0E40\u0E1A\u0E34\u0E01",
+    bordered: false,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_commons_forms_FormSearch__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    optStatus: optStatus,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_BtnAddNew__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    setOpen: setOpen,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_DataList__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    handleOpenDetail: handleOpenDetail,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_commons_MainModal__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    title: "Add new order.",
+    open: open,
+    handleCancel: handleCancel,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_commons_forms_AddOrderForm__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    handleCancel: handleCancel,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_commons_MainModal__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    title: "Detail.",
+    open: openDetail,
+    handleCancel: function handleCancel() {
+      return setOpenDetail(false);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_commons_forms_CashDetail__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    model: selModel,
+    handleCancel: handleCloseDetail,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  }))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_6__["connect"])(null, {
+  loadDataList: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_14__["loadDataList"]
+})(Home));
+
+/***/ }),
+
 /***/ "./components/commons/MainModal/index.js":
 /*!***********************************************!*\
   !*** ./components/commons/MainModal/index.js ***!
@@ -1087,6 +1210,282 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (MainModal);
+
+/***/ }),
+
+/***/ "./components/commons/forms/AddOrderForm.js":
+/*!**************************************************!*\
+  !*** ./components/commons/forms/AddOrderForm.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var antd_lib_button_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/button/style */ "antd/lib/button/style");
+/* harmony import */ var antd_lib_button_style__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button_style__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/button */ "antd/lib/button");
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd_lib_input_number_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/input-number/style */ "antd/lib/input-number/style");
+/* harmony import */ var antd_lib_input_number_style__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_input_number_style__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var antd_lib_input_number__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd/lib/input-number */ "antd/lib/input-number");
+/* harmony import */ var antd_lib_input_number__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_input_number__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var antd_lib_form_style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/form/style */ "antd/lib/form/style");
+/* harmony import */ var antd_lib_form_style__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form_style__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! antd/lib/form */ "antd/lib/form");
+/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var antd_lib_input_style__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! antd/lib/input/style */ "antd/lib/input/style");
+/* harmony import */ var antd_lib_input_style__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(antd_lib_input_style__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var antd_lib_input__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! antd/lib/input */ "antd/lib/input");
+/* harmony import */ var antd_lib_input__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_lib_input__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd/lib/modal/style */ "antd/lib/modal/style");
+/* harmony import */ var antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(antd_lib_modal_style__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var antd_lib_modal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd/lib/modal */ "antd/lib/modal");
+/* harmony import */ var antd_lib_modal__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(antd_lib_modal__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../../state/actions/CashAction */ "./state/actions/CashAction.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _jsxFileName = "/Users/bunyut/site/depth_first/components/commons/forms/AddOrderForm.js";
+
+
+
+
+var AddOrderForm =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_18__["default"])(AddOrderForm, _React$Component);
+
+  function AddOrderForm() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_13__["default"])(this, AddOrderForm);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_15__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_16__["default"])(AddOrderForm)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_19__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_17__["default"])(_this), "state", {
+      saving: false
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_19__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_17__["default"])(_this), "handleSubmit", function (e) {
+      e.preventDefault();
+
+      _this.props.form.validateFields(
+      /*#__PURE__*/
+      function () {
+        var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_12__["default"])(
+        /*#__PURE__*/
+        _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_9___default.a.mark(function _callee(err, values) {
+          return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_9___default.a.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  if (!err) {
+                    _context.next = 2;
+                    break;
+                  }
+
+                  return _context.abrupt("return");
+
+                case 2:
+                  //console.log('Received values of form: ',  values);
+                  _this.setState({
+                    saving: true
+                  });
+
+                  _context.next = 5;
+                  return _this.props.setFormData(values);
+
+                case 5:
+                  _this.setState({
+                    saving: false
+                  });
+
+                  _this.props.form.resetFields();
+
+                  _this.props.handleCancel();
+
+                  antd_lib_modal__WEBPACK_IMPORTED_MODULE_11___default.a.success({
+                    title: 'บันทึกสำเร็จ',
+                    content: 'กด ok เพื่อปิดหน้าต่าง'
+                  });
+
+                case 9:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee);
+        }));
+
+        return function (_x, _x2) {
+          return _ref.apply(this, arguments);
+        };
+      }());
+    });
+
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_14__["default"])(AddOrderForm, [{
+    key: "render",
+    value: function render() {
+      var getFieldDecorator = this.props.form.getFieldDecorator;
+      var formItemLayout = {
+        labelCol: {
+          xs: {
+            span: 24
+          },
+          sm: {
+            span: 8
+          }
+        },
+        wrapperCol: {
+          xs: {
+            span: 24
+          },
+          sm: {
+            span: 16
+          }
+        }
+      };
+      var config = {
+        rules: [{
+          type: 'string',
+          required: true,
+          message: 'Please type'
+        }]
+      }; //console.log('--->',this.props.cash);
+
+      return react__WEBPACK_IMPORTED_MODULE_20___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_6___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, formItemLayout, {
+        onSubmit: this.handleSubmit,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_20___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_6___default.a.Item, {
+        label: "\u0E04\u0E33\u0E2D\u0E18\u0E34\u0E1A\u0E32\u0E22",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }, getFieldDecorator('description', config)(react__WEBPACK_IMPORTED_MODULE_20___default.a.createElement(antd_lib_input__WEBPACK_IMPORTED_MODULE_8___default.a.TextArea, {
+        rows: 4,
+        style: {
+          width: 350
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        },
+        __self: this
+      }))), react__WEBPACK_IMPORTED_MODULE_20___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_6___default.a.Item, {
+        label: "\u0E08\u0E33\u0E19\u0E27\u0E19",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, getFieldDecorator('amount', {
+        initialValue: 1
+      })(react__WEBPACK_IMPORTED_MODULE_20___default.a.createElement(antd_lib_input_number__WEBPACK_IMPORTED_MODULE_4___default.a, {
+        min: 1,
+        max: 10,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_20___default.a.createElement("span", {
+        className: "ant-form-text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74
+        },
+        __self: this
+      }, " \u0E1A\u0E32\u0E17")), react__WEBPACK_IMPORTED_MODULE_20___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_6___default.a.Item, {
+        wrapperCol: {
+          xs: {
+            span: 24,
+            offset: 0
+          },
+          sm: {
+            span: 16,
+            offset: 8
+          }
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 76
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_20___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        loading: this.state.saving,
+        type: "primary",
+        htmlType: "submit",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
+        },
+        __self: this
+      }, "Submit")));
+    }
+  }]);
+
+  return AddOrderForm;
+}(react__WEBPACK_IMPORTED_MODULE_20___default.a.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    cash: state.cash
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (antd_lib_form__WEBPACK_IMPORTED_MODULE_6___default.a.create({
+  name: 'time_related_controls'
+})(Object(react_redux__WEBPACK_IMPORTED_MODULE_21__["connect"])(mapStateToProps, {
+  setFormData: _state_actions_CashAction__WEBPACK_IMPORTED_MODULE_22__["setFormData"]
+})(AddOrderForm)));
 
 /***/ }),
 
@@ -1882,6 +2281,39 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+
+function _extends() {
+  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
 }
 
 /***/ }),
@@ -2735,10 +3167,10 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 /***/ }),
 
-/***/ "./pages/cashier.js":
-/*!**************************!*\
-  !*** ./pages/cashier.js ***!
-  \**************************/
+/***/ "./pages/order_list.js":
+/*!*****************************!*\
+  !*** ./pages/order_list.js ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2747,22 +3179,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout/index.js");
-/* harmony import */ var _components_CashierList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/CashierList */ "./components/CashierList/index.js");
+/* harmony import */ var _components_OrderList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/OrderList */ "./components/OrderList/index.js");
 /* harmony import */ var _services_HOCs_AuthHOC__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/HOCs/AuthHOC */ "./services/HOCs/AuthHOC.js");
-var _jsxFileName = "/Users/bunyut/site/depth_first/pages/cashier.js";
+var _jsxFileName = "/Users/bunyut/site/depth_first/pages/order_list.js";
 
 
 
 
 
-var CashierPage = function CashierPage() {
+var OrderListPage = function OrderListPage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CashierList__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_OrderList__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -2771,7 +3203,7 @@ var CashierPage = function CashierPage() {
   }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_services_HOCs_AuthHOC__WEBPACK_IMPORTED_MODULE_3__["default"])(CashierPage));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_services_HOCs_AuthHOC__WEBPACK_IMPORTED_MODULE_3__["default"])(OrderListPage));
 
 /***/ }),
 
@@ -3854,14 +4286,14 @@ var setLogout = Object(redux_act__WEBPACK_IMPORTED_MODULE_2__["createAction"])('
 
 /***/ }),
 
-/***/ 3:
-/*!********************************!*\
-  !*** multi ./pages/cashier.js ***!
-  \********************************/
+/***/ 4:
+/*!***********************************!*\
+  !*** multi ./pages/order_list.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/bunyut/site/depth_first/pages/cashier.js */"./pages/cashier.js");
+module.exports = __webpack_require__(/*! /Users/bunyut/site/depth_first/pages/order_list.js */"./pages/order_list.js");
 
 
 /***/ }),
@@ -3976,6 +4408,28 @@ module.exports = require("antd/lib/col/style");
 
 /***/ }),
 
+/***/ "antd/lib/divider":
+/*!***********************************!*\
+  !*** external "antd/lib/divider" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/divider");
+
+/***/ }),
+
+/***/ "antd/lib/divider/style":
+/*!*****************************************!*\
+  !*** external "antd/lib/divider/style" ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/divider/style");
+
+/***/ }),
+
 /***/ "antd/lib/form":
 /*!********************************!*\
   !*** external "antd/lib/form" ***!
@@ -4028,6 +4482,28 @@ module.exports = require("antd/lib/icon/style");
 /***/ (function(module, exports) {
 
 module.exports = require("antd/lib/input");
+
+/***/ }),
+
+/***/ "antd/lib/input-number":
+/*!****************************************!*\
+  !*** external "antd/lib/input-number" ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/input-number");
+
+/***/ }),
+
+/***/ "antd/lib/input-number/style":
+/*!**********************************************!*\
+  !*** external "antd/lib/input-number/style" ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/input-number/style");
 
 /***/ }),
 
@@ -4483,4 +4959,4 @@ module.exports = require("regenerator-runtime");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=cashier.js.map
+//# sourceMappingURL=order_list.js.map
