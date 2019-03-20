@@ -63,3 +63,22 @@ export const mapStatus = val => {
 
   return txt;
 };
+
+export const mapLevelName = status => {
+  let txt = "";
+  switch (status) {
+    case 1:
+      txt = "Junior";
+      break;
+    case 2:
+      txt = "Senior";
+      break;
+    case 3:
+      txt = "Manager";
+      break;
+    default:
+      break;
+  }
+
+  return txt;
+};

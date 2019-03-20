@@ -22,5 +22,8 @@ module.exports = withLess({
     javascriptEnabled: true,
     modifyVars: themeVariables // make your antd custom effective
   },
+  publicRuntimeConfig: { // Will be available on both server and client
+    API_URL:'http://localhost:3001'
+  }
 
 })
