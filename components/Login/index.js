@@ -8,7 +8,8 @@ class LoginMain extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showAlert: false
+      showAlert: false,
+      loading:false
     };
   }
 
@@ -17,9 +18,10 @@ class LoginMain extends Component {
     this.props.form.validateFields(async (err, values) => {
       if (!err) {
         console.log("Received values of form: ", values);
-
+        this.setState({loading:true})
         let resUser = await this.props.onSetLogin(values);
 
+        this.setState({loading:false})
         if (resUser !== null) {
           Router.push("/");
         } else {
@@ -61,6 +63,7 @@ class LoginMain extends Component {
           </Form.Item>
           <Form.Item>
             <Button
+              loading={this.state.loading}
               type="primary"
               htmlType="submit"
               className="login-form-button"
